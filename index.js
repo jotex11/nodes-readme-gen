@@ -3,11 +3,12 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 // Created a function to write README file
-function createFile({ projectTitle, description, installation, usage, contribution, license, tests, questions, github, email}) {
+function createFile({ projectTitle, description, installation, usage, contribution, license, badge, tests, questions, github, email}) {
     return `
-    # Project Title
-    ${projectTitle}
-    
+
+    # ${projectTitle}
+    ${badge}
+
     ## Description
     ${description}
     
@@ -45,6 +46,28 @@ function createFile({ projectTitle, description, installation, usage, contributi
     `
 }
 
+let licenseBadge = [
+    {
+        license: "Apache 2.0",
+        badge: "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+    },
+    {
+        license: "Boost Software License 1.0",
+        badge: "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)",
+    },
+    {
+        license: "Creative Commons (CC0)",
+        badge: "[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)",
+    },
+    {
+        license: "ISC",
+        badge: "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)",
+    },
+    {
+        license: "MIT",
+        badge: "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
+    }
+]
 // Created a function to initialize app
 function init() {
     inquirer
