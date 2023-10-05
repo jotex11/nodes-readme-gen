@@ -41,7 +41,7 @@ function createFile({ projectTitle, description, installation, usage, contributi
     ${questions}
     
     ## Contact Info
-    Email ${email}
+    [Email](${email})
     [Github](https://github.com/${github})
     `
 }
@@ -132,7 +132,9 @@ function init() {
     ])
 // Enters answers into the readme 
     .then((answers) => {
-        const fileContents = createFile({...answers});
+        const userLicense = answers.license;
+        const userBadge = licenseBadge.find(item => item.license === userLicense).badge;
+        const fileContents = createFile({...answers, badge: userBadge});
         writeToFile('generateREADME.md', fileContents);
     })
 }

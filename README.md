@@ -21,9 +21,10 @@ My task was to create a professional readme file that can be made by inserting d
 3. Enter <code>node index.js</code> in the command line.
 4. Answer questions.
 ## Video
-
+[Walkthrough Video](https://watch.screencastify.com/v/KatEN3e9oLfGqLMFFeld)
 ## Credits
 None. 
 
 ## Links
-[Link to repo]( https://github.com/jotex11/nodes-readme-gen )
+[Link to repo]( https://github.com/jotex11/nodes-readme-gen)
+[Link to video](https://watch.screencastify.com/v/KatEN3e9oLfGqLMFFeld)
